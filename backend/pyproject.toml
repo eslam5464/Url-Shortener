@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "url shortner"
+version = "0.1.0"
+description = ""
+authors = ["Eslam <41278977+eslam5464@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.12"
+fastapi = {extras = ["all"], version = "^0.110.2"}
+SQLAlchemy = "^2.0.29"
+uvicorn = "^0.29.0"
+alembic = {extras = ["tz"], version = "^1.13.1"}
+tzdata = "^2024.1"
+limits = "^3.11.0"
+yarl = "^1.9.4"
+loguru = "^0.7.2"
+gunicorn = "^22.0.0"
+asyncpg = {extras = ["sa"], version = "^0.29.0"}
+black = "^24.4.0"
+redis = "^5.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
