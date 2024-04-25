@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+
+<body>
+    <a href="/" class="back-to-main"><i class="fas fa-home"></i> Go to Main Page</a>
+    <div class="container">
+        <h1>Shortened URL</h1>
+        <div class="shortened-url">
+            <p>Your original URL:</p>
+            <a href="{{ original_url }}" target="_blank">{{ original_url }}</a>
+            <p>Your shortened URL:</p>
+            <a href="{{ shortened_url }}" target="_blank">{{ shortened_url }}</a>
+            <p>Accessed <strong>{{access_count}}</strong> times</p>
+        </div>
+    </div>
+</body>
+
+{% include 'footer.html' %}

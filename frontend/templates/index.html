@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<body>
+    <a href="/" class="back-to-main"><i class="fas fa-home"></i> Go to Main Page</a>
+    <div class="container">
+        <h2>URL Shortener</h2>
+        <form action="/" method="POST">
+            <input type="text" name="url" placeholder="Enter URL to shorten" required>
+            <input type="submit" value="Shorten URL">
+        </form>
+        <div>
+            <h4 class="error-message">{{msg}}</h4>
+        </div>
+
+        {%if shortened_url %}
+        <div class="shortened-url">
+            <p>Your original URL:</p>
+            <a href="{{ original_url }}" target="_blank">{{ original_url }}</a>
+            <p>Your shortened URL:</p>
+            <a id="shortenedUrl" href="{{ shortened_url }}" target="_blank">{{ shortened_url }}</a>
+        </div>
+        {%endif%}
+
+    </div>
+    <script src="{{ url_for('static', path='/js/script.js') }}"></script>
+</body>
+
+{% include 'footer.html' %}
