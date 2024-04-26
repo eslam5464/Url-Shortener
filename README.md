@@ -81,7 +81,7 @@
 ##### Environment variables
 
 ```dotenv
-BACKEND_HOST=localhost
+BACKEND_HOST=127.0.0.1
 BACKEND_PORT=8000
 
 CORS_ORIGIN=["*"]
@@ -107,7 +107,7 @@ REDIS_PORT=6379
 2. Create a new virtual
    environment [Official python website documentation](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
 3. Activate the virtual environment
-4. Change the directory to 'backend' folder and then run the following command
+4. Change the directory to 'backend' folder e.g. `cd backend`, and then run the following commands
 
 ```shell
 pip install poetry poetry-plugin-export
@@ -115,6 +115,7 @@ poetry config virtualenvs.create false
 poetry export --without-hashes -f requirements.txt -o requirements.txt
 pip install --upgrade pip
 pip install -r requirements.txt
+python main.py
 ```
 
 #### Docker
